@@ -2,6 +2,7 @@
   "name": "jest-plugin-yeelight",
   "version": "1.0.0",
   "description": "Jest plugin to change yeelight smart lights based on test results. Make your room red when your tests are failing. Light it green when everything is ok",
+  "repository": "github:jmarti-theinit/jest-plugin-yeelight",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -11,5 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "miio": "^0.15.6"
-  }
+  },
+  "keywords": [
+    "yeelight",
+    "jest",
+    "tdd",
+    "colors",
+    "xiaomi"
+  ]
 }
