@@ -1,14 +1,16 @@
 # Jest Plugin Yeelight
 
-A Jest plugin to change Yeelight Smart Light colors based on test results. When tests pass, your light is green.
-When tests are failing, your light is red.
+A Jest plugin to change Yeelight Smart Light colors based on test results. When tests pass, your light turns green.
+When tests are failing, your light turns red.
 
 It's a great complement to your twitch or youtube streamings. Please, if you use this in your streamings,
 it would be lovely if you gave me some credit, at least, once in a while.
 
 Yeelight is the most common Xiaomi MI smart light.
 
-Watch my streamings! https://twitch.tv/itortv
+I use this in my streamings for: https://github.com/jmarti-theinit/escape-blackout
+
+You can watch my streamings here! https://twitch.tv/itortv
 
 ## Install
 
@@ -27,7 +29,11 @@ npm install jest-plugin-yeelight
 Add the plugin in your jest.config.js file, with the IP of your yeelight.
 
 ```
-watchPlugins: [ [ 'jest-plugin-yeelight', { ip: '192.168.1.56'} ]] ,
+module.exports = {
+  ...
+  watchPlugins: [ [ 'jest-plugin-yeelight', { ip: '192.168.1.56'} ]] ,
+  ...
+}
 ```
 
 For this to work, you can use "miio" to get the IP address and save the security token in memory.
@@ -38,7 +44,7 @@ npx miio discovery
 npx miio inspect (IPADDRESS)
 npx miio tokens update (IPADDRESS) --token (YOUR_TOKEN)
 ```
-https://github.com/aholstenson/miio#readme
+More information: https://github.com/aholstenson/miio#readme
 
 You can use this to get the token of your yeelight:
 
@@ -68,9 +74,9 @@ module.exports = {
 ## License
 
 Please, if you use this in your streamings, it would be very kind of you
-to give me some credit, and tell your users you got this from twitch.tv/itortv
+to give me some credit, and tell your users you got this from https://twitch.tv/itortv
 
-ISC License
+### ISC License
 
 Copyright (c) 2021, Jordi Martí
 
