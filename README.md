@@ -36,8 +36,15 @@ module.exports = {
 }
 ```
 
-For this to work, you can use "miio" to get the IP address and save the security token in memory.
+Now, when you run your tests in "watch" mode, the plugin is evaluated and your
+smart light will change color based on the tests results. You need to execute your jest
+tests in watch mode. For example, if you use vue-cli-service with jest: 
 
+```
+vue-cli-service test:unit --watch
+```
+
+For this to work, you need to use "miio" to get the IP address and save the security token in memory.
 
 ```
 npx miio discovery
