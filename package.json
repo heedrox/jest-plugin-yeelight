@@ -1,7 +1,7 @@
 {
   "name": "jest-plugin-yeelight",
   "version": "1.0.0",
-  "description": "Jest plugin to change yeelight smart lights based on test results",
+  "description": "Jest plugin to change yeelight smart lights based on test results. Make your room red when your tests are failing. Light it green when everything is ok",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
