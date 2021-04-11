@@ -22,13 +22,13 @@ https://amzn.to/3uCANyr
 
 Add the plugin:
 
-```
+```commandline
 npm install jest-plugin-yeelight
 ```
 
 Add the plugin in your jest.config.js file, with the IP of your yeelight.
 
-```
+```javascript
 module.exports = {
   ...
   watchPlugins: [ [ 'jest-plugin-yeelight', { ip: '192.168.1.56'} ]] ,
@@ -40,13 +40,13 @@ Now, when you run your tests in "watch" mode, the plugin is evaluated and your
 smart light will change color based on the tests results. You need to execute your jest
 tests in watch mode. For example, if you use vue-cli-service with jest: 
 
-```
+```commandline
 vue-cli-service test:unit --watch
 ```
 
 For this to work, you need to use "miio" to get the IP address and save the security token in memory.
 
-```
+```commandline
 npx miio discovery
 npx miio inspect (IPADDRESS)
 npx miio tokens update (IPADDRESS) --token (YOUR_TOKEN)
@@ -60,7 +60,7 @@ https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor
 In order to be able to publish your repo in Github, without others requiring to have a Yeelight, 
 you might want to do something like this in your jest.config.js:
 
-```
+```javascript
 const isYeelightInstalled = () => {
   try {
     require.resolve("jest-plugin-yeelight");
