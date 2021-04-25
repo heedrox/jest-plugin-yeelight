@@ -7,7 +7,7 @@ class YeelightWatchPlugin {
   }
   apply(jestHooks) {
     jestHooks.onTestRunComplete(results => {
-      changeColorTest(this.ip, results.numFailedTests > 0);
+      changeColorTest(this.ip, !results.success);
     });
   }
 }
